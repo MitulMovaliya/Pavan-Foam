@@ -14,10 +14,8 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(
   cors({
-    origin: [
-      "https://mutually-concise-snipe.ngrok-free.app",
-      "http://localhost:5173",
-    ],
+    origin: ["http://localhost:5173"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
 );
