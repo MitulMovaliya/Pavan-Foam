@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #ffffff;
+  color: black;
+}
+
+.background {
+  background: radial-gradient(#173b4536 1px, transparent 1px);
+  background-size: 16px 16px;
+  z-index: -10;
+}
+
+@layer components {
+  .navbar {
+    @apply cursor-pointer hover:text-primary hover:-translate-y-1 transition ease-linear duration-100 hover:border-b-2 border-primary;
+  }
+}
+
+@layer base {
+  label {
+    @apply block text-sm font-medium text-gray-800 dark:text-gray-200;
+  }
+
+  input,
+  textarea {
+    @apply mt-2 block w-full rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-gray-700 placeholder-gray-400 shadow-sm focus:border-orange-500 focus:ring focus:ring-orange-500 focus:ring-opacity-50 transition ease-in-out duration-200;
+  }
+}
